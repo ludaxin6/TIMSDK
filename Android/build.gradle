@@ -44,7 +44,7 @@ ext {
     targetSdkVersion = 28
     versionCode = 1
 versionName = "4.9.1"
-    abiFilters = ['armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'] //['armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64']
+    abiFilters = ['armeabi', 'armeabi-v7a', 'x86'] //['armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64']
     arguments = "-DANDROID_STL=c++_static"
     cppFlags = "-std=c++11"
 }

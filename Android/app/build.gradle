@@ -40,7 +40,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
+    packagingOptions {
+        pickFirst '**/libc++_shared.so'
+        doNotStrip '*/armeabi/libYTCommon.so'
+        doNotStrip '*/armeabi-v7a/libYTCommon.so'
+        doNotStrip '*/x86/libYTCommon.so'
+    }
     repositories {
         flatDir {
             dirs 'libs'
@@ -80,9 +85,5 @@ dependencies {
     // bugly sdk
     implementation 'com.tencent.bugly:crashreport:latest.release'
     implementation 'com.tencent.bugly:nativecrashreport:latest.release'
-
-    api 'com.tencent.liteav:LiteAVSDK_TRTC:latest.release'
-
-implementation 'com.tencent.imsdk:tuikit:4.9.1'
-// implementation project(':tuikit')
+ implementation project(':tuikit')
 }
